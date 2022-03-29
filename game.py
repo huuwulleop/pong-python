@@ -13,6 +13,9 @@ pygame.display.set_caption("Pong")
 ball_w = 30
 ball_h = 30
 
+ball = pygame.Rect(screen_width/2 - ball_w/2, screen_heigth/2 - ball_h/2, ball_w, ball_h)
+player = pygame.Rect(screen_width - 20, screen_heigth/2 - 70, 10, 140)
+opponent = pygame.Rect(10, screen_heigth/2 - 70, 10, 140)
 
 # Main game loop
 while True:
