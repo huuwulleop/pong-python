@@ -10,7 +10,8 @@ screen_heigth = 960
 screen = pygame.display.set_mode((screen_width, screen_heigth))
 pygame.display.set_caption("Pong")
 
-
+ball_w = 30
+ball_h = 30
 
 
 # Main game loop
