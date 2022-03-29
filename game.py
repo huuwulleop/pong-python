@@ -20,7 +20,17 @@ def player_animation():
         player.top = 0
     if player.bottom >= screen_height:
         player.bottom = screen_height
-    
+
+
+def opponent_animation():
+    if opponent.top < ball.y:
+        opponent.top += opponent_speed
+    if opponent.bottom > ball.y:
+        opponent.bottom -= opponent_speed
+    if opponent.top <= 0:
+        opponent.top = 0
+    if opponent.bottom >= screen_height:
+        opponent.bottom = screen_height
 
 # Setup
 pygame.init()
@@ -45,7 +55,7 @@ light_grey = (200, 200, 200)
 ball_speed_x = 7
 ball_speed_y = 7
 player_speed = 0
-opponent_speed = 0
+opponent_speed = 7
 
 # Main game loop
 while True:
@@ -67,6 +77,7 @@ while True:
     
     ball_animation()
     player_animation()
+    opponent_animation()
     
     # Draw rectangles
     screen.fill(bg_color)
